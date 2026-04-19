@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Viewer - Latest Posts</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .post {
+            background: white;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .post:hover {
+            transform: translateY(-2px);
+        }
+        .post-content {
+            margin-bottom: 1rem;
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+        .post-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        .post-timestamp {
+            color: #666;
+            font-size: 0.9rem;
+            text-align: right;
+        }
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+        .error {
+            text-align: center;
+            color: #ff6b6b;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+        .no-posts {
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Latest Blog Posts</h1>
+        <div id="postsContainer"></div>
+        <div id="loading" class="loading" style="display: none;">Loading posts...</div>
+        <div id="error" class="error" style="display: none;"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
